@@ -18,9 +18,11 @@ export const createPulley = (scene) => {
 
   const material = new StandardMaterial("pulleyMaterial", scene);
 
-  material.diffuseColor = new Color3(0.4, 0.4, 0.4);
+  material.diffuseColor = new Color3(0.75, 0.75, 0.78);
 
+  material.specularColor = new Color3(1, 1, 1);
   pulley.material = material;
+  
 
   return pulley;
 };

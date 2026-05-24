@@ -16,14 +16,14 @@ export const createPoleasScene = (engine, canvas) => {
   const scene = new Scene(engine);
 
   // Fondo
-  scene.clearColor = new Color4(0.85, 0.9, 1, 1);
+  scene.clearColor = new Color4(0.92, 0.95, 1, 1);
 
   // Cámara
   const camera = new ArcRotateCamera(
     "camera",
     Math.PI / 2,
     Math.PI / 3,
-    15,
+    18,
     new Vector3(0, 4, 0),
     scene,
   );
@@ -31,10 +31,13 @@ export const createPoleasScene = (engine, canvas) => {
   camera.attachControl(canvas, true);
 
   camera.lowerRadiusLimit = 10;
+
   camera.upperRadiusLimit = 25;
 
-  // Luz
-  new HemisphericLight("light", new Vector3(0, 1, 0), scene);
+  // Luz SUAVE
+  const light = new HemisphericLight("light", new Vector3(0, 1, 0), scene);
+
+  light.intensity = 1.1;
 
   // Objetos
   const pulley = createPulley(scene);
