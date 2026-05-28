@@ -10,7 +10,7 @@ import { createPulley } from "../objects/pulley";
 import { createWeight } from "../objects/weight";
 import { createRope } from "../objects/rope";
 import { createSupport } from "../objects/support";
-import { setupControls } from "../controls/movementControls";
+import { setupControls } from "../../controls/movementControls";
 
 export const createPoleasScene = (engine, canvas) => {
   const scene = new Scene(engine);
