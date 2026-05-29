@@ -11,7 +11,7 @@ export function updateRenderSystem(weight, pulleys) {
     }
   } else {
     if (weight.position.y > simulationState.minHeight) {
-      weight.position.y -= 0.02;
+      weight.position.y -= 0.03;
 
       pulleys.forEach((pulley) => {
         pulley.rotation.x -= 0.03;

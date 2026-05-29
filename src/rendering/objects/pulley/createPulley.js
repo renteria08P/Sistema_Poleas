@@ -1,23 +1,30 @@
 import { MeshBuilder, StandardMaterial, Color3 } from "@babylonjs/core";
 
-export function createPulley(scene, position) {
+export function createPulley(scene, position, type = "fixed") {
   const pulley = MeshBuilder.CreateCylinder(
     "pulley",
     {
-      diameter: 2,
-      height: 0.5,
+      diameter: 1.2,
+      height: 0.3,
       tessellation: 64,
     },
     scene,
   );
 
   pulley.rotation.z = Math.PI / 2;
-
   pulley.position = position;
 
   const material = new StandardMaterial("pulleyMaterial", scene);
 
-  material.diffuseColor = new Color3(0.3, 0.3, 0.35);
+  // Poleas superiores
+  if (type === "fixed") {
+    material.diffuseColor = new Color3(0.2, 0.2, 0.25);
+  }
+
+  // Poleas inferiores
+  else {
+    material.diffuseColor = new Color3(0.2, 0.5, 0.9);
+  }
 
   pulley.material = material;
 

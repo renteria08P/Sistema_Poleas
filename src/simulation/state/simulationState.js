@@ -1,11 +1,13 @@
 export const simulationState = {
-  pulleys: 2,
+  currentConfiguration: "fixed",
+
+  pulleys: 1,
 
   weight: 100,
 
   appliedForce: 0,
 
-  requiredForce: 50,
+  requiredForce: 100,
 
   movementSpeed: 0,
 

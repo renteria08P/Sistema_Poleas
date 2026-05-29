@@ -16,7 +16,7 @@ export function createSupport(scene) {
     scene,
   );
 
-  support.position = new Vector3(0, 5.5, 0);
+  support.position = new Vector3(0, 7, 0);
 
   const material = new StandardMaterial("supportMaterial", scene);
 
