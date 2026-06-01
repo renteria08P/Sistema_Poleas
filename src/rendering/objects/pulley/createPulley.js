@@ -4,8 +4,8 @@ export function createPulley(scene, position, type = "fixed") {
   const pulley = MeshBuilder.CreateCylinder(
     "pulley",
     {
-      diameter: 1.2,
-      height: 0.3,
+      diameter: 1.8,
+      height: 0.4,
       tessellation: 64,
     },
     scene,

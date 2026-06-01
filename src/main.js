@@ -71,7 +71,7 @@ function update() {
   updateWeightLabel(weightLabel);
 
   if (rope) {
-    updateRope(rope, weight);
+    updateRope(rope,weight, pulleys);
   }
 }
 

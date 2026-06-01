@@ -23,11 +23,11 @@ export function createControlPanel(onSystemChange) {
 
     <select id="system">
 
-      <option value="fixed">
+      <option value="simple">
         Polea simple
       </option>
 
-      <option value="movable">
+      <option value="compound2">
         Sistema de 2 poleas
       </option>
 
@@ -38,6 +38,8 @@ export function createControlPanel(onSystemChange) {
       <option value="block6">
         Sistema de 6 poleas
       </option>
+
+    </select>
 
     </select>
 

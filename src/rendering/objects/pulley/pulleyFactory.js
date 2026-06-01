@@ -4,46 +4,42 @@ import { createPulley } from "./createPulley";
 export function createPulleySystem(scene, pulleyCount) {
   const pulleys = [];
 
-  // Sistema 1 polea
+  // 1 polea
   if (pulleyCount === 1) {
-    pulleys.push(createPulley(scene, new Vector3(0, 4, 0)));
+    pulleys.push(createPulley(scene, new Vector3(0, 4, 0), "fixed"));
   }
 
-  // Sistema 2 poleas
+  // 2 poleas
   else if (pulleyCount === 2) {
-    pulleys.push(createPulley(scene, new Vector3(0, 4, 0)));
+    pulleys.push(createPulley(scene, new Vector3(0, 4, 0), "fixed"));
 
-    pulleys.push(createPulley(scene, new Vector3(0, 1.5, 0)));
+    pulleys.push(createPulley(scene, new Vector3(0, 1, 0), "mobile"));
   }
 
-  // Sistema 4 poleas
+  // 4 poleas
   else if (pulleyCount === 4) {
-    // Arriba (fijas)
-    pulleys.push(createPulley(scene, new Vector3(-3, 4, 0), "fixed"));
+    pulleys.push(createPulley(scene, new Vector3(-2.5, 4, 0), "fixed"));
 
-    pulleys.push(createPulley(scene, new Vector3(3, 4, 0), "fixed"));
+    pulleys.push(createPulley(scene, new Vector3(2.5, 4, 0), "fixed"));
 
-    // Abajo (móviles)
-    pulleys.push(createPulley(scene, new Vector3(-3, 1.5, 0), "mobile"));
+    pulleys.push(createPulley(scene, new Vector3(-2.5, 0, 0), "mobile"));
 
-    pulleys.push(createPulley(scene, new Vector3(3, 1.5, 0), "mobile"));
+    pulleys.push(createPulley(scene, new Vector3( 2.5, 0, 0), "mobile"));
   }
 
-  // Sistema 6 poleas
+  // 6 poleas
   else if (pulleyCount === 6) {
-    // Arriba (fijas)
     pulleys.push(createPulley(scene, new Vector3(-4, 4, 0), "fixed"));
 
     pulleys.push(createPulley(scene, new Vector3(0, 4, 0), "fixed"));
 
     pulleys.push(createPulley(scene, new Vector3(4, 4, 0), "fixed"));
 
-    // Abajo (móviles)
-    pulleys.push(createPulley(scene, new Vector3(-4, 1.5, 0), "mobile"));
+    pulleys.push(createPulley(scene, new Vector3(-4, 0, 0), "mobile"));
 
-    pulleys.push(createPulley(scene, new Vector3(0, 1.5, 0), "mobile"));
+    pulleys.push(createPulley(scene, new Vector3(0, 0, 0), "mobile"));
 
-    pulleys.push(createPulley(scene, new Vector3(4, 1.5, 0), "mobile"));
+    pulleys.push(createPulley(scene, new Vector3(4, 0, 0), "mobile"));
   }
 
   return pulleys;

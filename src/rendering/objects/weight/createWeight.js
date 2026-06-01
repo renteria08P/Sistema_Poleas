@@ -14,7 +14,7 @@ export function createWeight(scene) {
     scene,
   );
 
-  weight.position = new Vector3(0, -1.5, 0);
+  weight.position = new Vector3(0, -3, 0);
 
   const material = new StandardMaterial("weightMaterial", scene);
 

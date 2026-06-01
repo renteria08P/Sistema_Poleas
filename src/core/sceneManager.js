@@ -10,13 +10,12 @@ export function createScene(engine, canvas) {
 
   const camera = new ArcRotateCamera(
     "camera",
-    Math.PI / 2,
-    Math.PI / 3,
-    20,
-    Vector3.Zero(),
+    0,
+    Math.PI / 2.3,
+    16,
+    new Vector3(0, 1, 0),
     scene,
   );
-
   camera.attachControl(canvas, true);
 
   new HemisphericLight("light", new Vector3(0, 1, 0), scene);
